@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "us-west-2"
+  region = data.tfe_outputs.source_workspace.nonsensitive_values.region
 }
 
 data "aws_ami" "ubuntu" {
